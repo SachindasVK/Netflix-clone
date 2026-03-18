@@ -1,18 +1,29 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
-import LanguageSelect from '../Language/LanguageSelect';
+import React, { useEffect, useRef } from 'react'
+import './Navbar.css'
+import search_icon from '../../assets/search_icon.svg'
+import bell_icon from '../../assets/bell_icon.svg'
+import profile_img from '../../assets/profile_img.png'
+import caret_icon from '../../assets/caret_icon.svg'
+import { logout } from '../../firebase'
 
-const LandHeader = () => {
-  const navigate = useNavigate()
+const Navbar = () => {
+  const navRef = useRef()
+  useEffect(()=>{
+    window.addEventListener('scroll',()=>{
+      if(window.scrollY >= 5) {
+        navRef.current.classList.add('nav-dark')
+      } else {
+        navRef.current.classList.remove('nav-dark')
+      }
+    })
+  },[])
   return (
-<header className="px-37 py-6 flex justify-between w-full">
- 
-      {/* Logo */}
-      <div className="flex items-center">
-        <svg
+    <div ref={navRef} className='navbar'>
+        <div className="navbar-left">
+           <svg
           viewBox="0 0 111 30"
           xmlns="http://www.w3.org/2000/svg"
-          className="h-10 w-auto text-red"
+          className="h-11 w-auto text-red-900"
         >
           <g>
             <path
@@ -21,18 +32,28 @@ const LandHeader = () => {
             />
           </g>
         </svg>
-      </div>
-
-      <div className="flex items-center gap-4">
-        {/* Select Language */}
-        <LanguageSelect />
-        {/* Sign in button */}
-        <button onClick={()=>navigate('/login')} className="bg-red-600 text-white px-4 py-[4px] rounded flex items-center justify-center font-semibold">
-          Sign in
-        </button>
-      </div>
-    </header>
-  );
+        <ul>
+            <li>Home</li>
+            <li>Tv shows</li>
+            <li>New & Popular</li>
+            <li>My List</li>
+            <li>Browse by language</li>
+        </ul>
+        </div>
+        <div className="navbar-right">
+            <img src={search_icon} alt="" className='icons' />
+            <p>children</p>
+            <img src={bell_icon} alt="" />
+            <div className="navbar-profile">
+              <img src={profile_img} alt="" className='profile' />
+              <img src={caret_icon} alt="" />
+              <div className='dropdown'>
+                <p onClick={()=>{logout()}}>Sign out of Netflix</p>
+              </div>
+            </div>
+        </div>
+    </div>
+  )
 }
 
-export default LandHeader
+export default Navbar

@@ -12,7 +12,7 @@ const InputButton = () => {
         ref={inputRef}
         type="text"
         placeholder="Enter email"
-        className="px-4 py-3 rounded bg-black/70 border border-gray-500 w-full sm:w-[450px]"
+        className="px-4 py-3 rounded bg-black/60 border border-gray-500 w-full sm:w-112.5"
       />
     </div>
       <button
