@@ -93,7 +93,7 @@
     justify-content: center;
 }
 .login-spinner img {
-    width: 240px;
+    width: 400px;
 }
 
 @media (max-width:500px) {

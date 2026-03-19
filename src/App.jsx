@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { auth } from "./firebase";
 import { ToastContainer, toast } from 'react-toastify';
 import Landing from "./pages/Landing";
+import MovieDetails from "./pages/MovieDetails/MovieDetails";
 
 const App = () => {
   const navigate = useNavigate()
@@ -46,6 +47,7 @@ const App = () => {
         <Route path="/in" element={<HomeCompo />} />
         <Route path="/login" element={<Login />} />
         <Route path="/player/:type/:id" element={<Player />} />
+        <Route path="/details/:type/:id" element={<MovieDetails />} />
       </Routes>
     </div>
   );

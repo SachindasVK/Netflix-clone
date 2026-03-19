@@ -1,80 +1,96 @@
+/* HERO CONTAINER */
 .hero {
   position: relative;
-  height:100%;
+  height: 95vh;
   overflow: hidden;
-}
-.hero-img-wrapper {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  height: 100;
 }
 
-/* Curve shape */
+/* IMAGE + VIDEO WRAPPER */
+.hero-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* CURVE SHAPE (BOTTOM) */
 .hero-img-wrapper::after {
   content: "";
   position: absolute;
-  bottom: -20px;
+  bottom: -27px;
   left: 0;
   width: 100%;
   height: 60px;
   background: black;
 
-  /* THIS creates the curve */
   border-top-left-radius: 50% 100%;
   border-top-right-radius: 50% 100%;
-}
-/* Banner image */
-.banner-img {
-  width: 100%;
-  height: 90vh;
-  object-fit: cover;
+  z-index: 2;
 }
 
-/* Caption */
-.hero-caption {
-  position: absolute;
-  bottom: 20%;
-  left: 7%;
-  max-width: 600px;
-  color: #fff;
-}
-
-.hero-img-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-/* DARK GRADIENT OVERLAY */
+/* DARK OVERLAY */
 .hero-img-wrapper::before {
   content: "";
   position: absolute;
   inset: 0;
-
-  /* background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.9) 10%,
-    rgba(0, 0, 0, 0.6) 40%,
-    rgba(0, 0, 0, 0.2) 70%,
-    transparent 100%
-  ); */
-
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
   z-index: 1;
+  pointer-events: none;
 }
-/* Title image */
+
+/* IMAGE */
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 0;
+}
+
+/* IMAGE */
+.banner-img-video {
+    padding-top: 100px;
+
+}
+
+
+
+.hero-img-wrapper iframe {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 180.77vh;   /* 16:9 ratio trick */
+  height: 190%;
+
+  transform: translate(-50%, -50%);
+  border: none;
+  z-index: 0;
+}
+/* CAPTION */
+.hero-caption {
+  position: absolute;
+  bottom: 25%;
+  left: 10%;
+  max-width: 600px;
+  color: #fff;
+  z-index: 3;
+}
+
+/* TITLE IMAGE */
 .caption-img {
   width: 3%;
   max-width: 420px;
 }
 
-/* Text */
+/* TEXT */
 .hero-caption p {
   font-size: 16px;
   margin-bottom: 20px;
   line-height: 1.4;
 }
 
-/* Buttons */
+/* BUTTONS */
 .hero-btns {
   display: flex;
   gap: 12px;
@@ -110,4 +126,9 @@
 
 .hero-btns .btn.dark-btn:hover {
   background: rgba(109, 109, 110, 0.4);
+}
+
+.banner-img,
+.hero-img-wrapper iframe {
+  transition: opacity 0.5s ease;
 }

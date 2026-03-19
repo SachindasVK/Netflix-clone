@@ -15,17 +15,10 @@ const Player = () => {
     overview: "",
     vote_average: "",
   });
-  const options = {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMTQxYTlkNmRjN2U1ZGU2NjgyMGU3ZmQzZmZhY2Q5ZCIsIm5iZiI6MTc3MzQ1MDI3NS4xNTY5OTk4LCJzdWIiOiI2OWI0YjQyMzgwODA0MTI4ZmQwOGUwMGEiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.IPRg2WKeiBc_IYmjYHKKW_bt4vuHvYdH_UgPZ8E8hmk",
-    },
-  };
+
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/${type}/${id}/videos`, options)
+    fetch(`https://api.themoviedb.org/3/${type}/${id}/videos?api_key=${import.meta.env.VITE_TMDB_KEY}`)
       .then((res) => res.json())
       .then((res) => {
         const trailer = res.results.find((vid) => vid.type === "Trailer" && vid.site === "YouTube");
