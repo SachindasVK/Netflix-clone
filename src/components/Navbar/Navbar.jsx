@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <div ref={navRef} className='navbar'>
         <div className="navbar-left">
-           <svg
+           <svg onClick={()=>navigate('/in')}
           viewBox="0 0 111 30"
           xmlns="http://www.w3.org/2000/svg"
           className="h-11 w-auto text-red-900"

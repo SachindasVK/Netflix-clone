@@ -25,30 +25,42 @@ const Trailer = () => {
   }, [id, type]);
 
   if (!apiData) {
-    return <div>Loading trailer...</div>;
+    return (
+      <div className="px-35 pt-6">
+        <p className="text-sm text-white">Trailer Not Available</p>
+    </div>
+    )
   }
 
-  return (
-    <div className="px-35 pt-10">
-        <h2 className="text-4xl pt-10 font-bold mb-4 text-white">Trailer</h2>
-      <Card className="p-6 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg">
+ return (
+  <div className="px-4 sm:px-6 md:px-16 lg:px-32 pt-6 sm:pt-10">
+    
+    {/* Title */}
+    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-white">
+      Trailer
+    </h2>
 
-        <div className="flex flex-col items-center gap-4">
-          {apiData.key && (
+    <Card className="p-4 sm:p-6 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg">
+      
+      <div className="flex flex-col items-center gap-4">
+        
+        {apiData.key && (
+          <div className="w-full aspect-video">
             <iframe
-              width="100%"
-              height="450"
               src={`https://www.youtube.com/embed/${apiData.key}`}
               title={apiData.name}
               frameBorder="0"
               allowFullScreen
-              className="rounded-xl"
+              className="w-full h-full rounded-xl"
             ></iframe>
-          )}
-        </div>
-      </Card>
-    </div>
-  );
+          </div>
+        )}
+
+      </div>
+
+    </Card>
+  </div>
+);
 };
 
 export default Trailer;

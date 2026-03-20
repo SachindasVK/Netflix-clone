@@ -6,7 +6,8 @@ import { Card } from "../ui/card";
 const LandFooter = () => {
   const location = useLocation();
   const isHome = location.pathname === "/in";
-  const isDetails = location.pathname.includes('/details')
+  const isDetails = location.pathname.includes("/details");
+
   const footerDetails = [
     {
       link1: "FAQ",
@@ -32,54 +33,57 @@ const LandFooter = () => {
       link3: "Contact Us",
     },
   ];
+
   return (
-    <>
-      <div className="py-5 relative flex-col text-center bg-black font-semibold text-white">
-        {isHome || !isDetails && (
-          <>
-            <div className=" py-3">
-              Ready to watch? Enter your email to create or restart your
-              membership.
-            </div>
-            <div className="flex justify-center">
-              <InputButton />
-            </div>
-          </>
-        )}
-      </div>
-      <div className="py-10 pl-33 bg-black text-stone-400 font-medium">
+    <footer className="bg-black font-medium w-full">
+      {/* Input Section (conditionally rendered) */}
+      {isHome && isDetails && (
+        <div className="flex flex-col items-center text-center py-5 px-4 sm:px-6 md:px-10">
+          <div className="py-3 text-white font-semibold">
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </div>
+          <div className="flex justify-center w-full sm:w-auto">
+            <InputButton />
+          </div>
+        </div>
+      )}
+
+      {/* Call Section */}
+      <div className="py-5 px-4 sm:px-6 md:px-34 text-stone-400 font-medium text-center sm:text-left">
         Questions? Call{" "}
         <span className="underline cursor-pointer">000-800-919-1743</span>
       </div>
-      <div className=" bg-black flex px-30 py-2 space-x-10">
-        {footerDetails.map((link, index) => {
-  return (
-    <Card
-      key={`card-${index}`}
-      className="flex items-start relative p-0 border-0 w-52 h-[11.8rem] isolate bg-black rounded-none"
-    >
-      <div className="cursor-pointer underline p-2 space-y-4 text-stone-400 font-medium">
-        {link.link1 && <div>{link.link1}</div>}
-        {link.link2 && <div>{link.link2}</div>}
-        {link.link3 && <div>{link.link3}</div>}
-        {link.link4 && <div>{link.link4}</div>}
-      </div>
-    </Card>
-  );
-})}
+
+      {/* Footer Links Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-4 sm:px-6 md:px-32 py-6">
+        {footerDetails.map((link, index) => (
+          <Card
+            key={`card-${index}`}
+            className="flex items-start p-2 border-0 w-full bg-black text-stone-400"
+          >
+            <div className="space-y-2 text-stone-400  cursor-pointer underline">
+              {link.link1 && <div>{link.link1}</div>}
+              {link.link2 && <div>{link.link2}</div>}
+              {link.link3 && <div>{link.link3}</div>}
+              {link.link4 && <div>{link.link4}</div>}
+            </div>
+          </Card>
+        ))}
       </div>
 
-      <div className="pl-30 bg-black text-stone-400 space-y-10 pb-40">
+      {/* Language & Legal Section */}
+      <div className="flex flex-col space-y-4 px-4 sm:px-6 md:px-34 pb-20">
         <LanguageSelect />
-        <div>Netflix India</div>
-        <div>
+        <div className="text-white">Netflix India</div>
+        <div className="text-stone-400 text-sm sm:text-base">
           This page is protected by Google reCAPTCHA to ensure you're not a bot.{" "}
           <span className="cursor-pointer underline text-blue-500">
             Learn more.
           </span>
         </div>
       </div>
-    </>
+    </footer>
   );
 };
 

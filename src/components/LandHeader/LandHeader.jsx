@@ -1,18 +1,20 @@
-import React from 'react'
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import LanguageSelect from '../Language/LanguageSelect';
 
 const LandHeader = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
   return (
-<header className="px-37 py-6 flex justify-between w-full">
- 
+    <header className="px-4 sm:px-6 md:px-10 lg:px-20 py-4 flex flex-col sm:flex-row items-center justify-between w-full gap-4 sm:gap-0 absolute top-0 left-0 z-20">
       {/* Logo */}
-      <div className="flex items-center">
+      
+      {/* Logo */}
+      <div className="flex items-center justify-center sm:justify-start w-full sm:w-auto">
         <svg
           viewBox="0 0 111 30"
           xmlns="http://www.w3.org/2000/svg"
-          className="h-10 w-auto text-red"
+          className="h-8 sm:h-10 w-auto text-red-600"
         >
           <g>
             <path
@@ -23,16 +25,21 @@ const LandHeader = () => {
         </svg>
       </div>
 
-      <div className="flex items-center gap-4">
+      {/* Right Side: Language Select + Button */}
+      <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 w-full sm:w-auto">
         {/* Select Language */}
         <LanguageSelect />
+
         {/* Sign in button */}
-        <button onClick={()=>navigate('/login')} className="bg-red-600 text-white px-4 py-[4px] rounded flex items-center justify-center font-semibold">
+        <button
+          onClick={() => navigate('/login')}
+          className="bg-red-600 text-white px-4 py-2 sm:py-[4px] rounded flex items-center justify-center font-semibold"
+        >
           Sign in
         </button>
       </div>
     </header>
   );
-}
+};
 
-export default LandHeader
+export default LandHeader;

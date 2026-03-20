@@ -27,36 +27,45 @@ const TitleDetails = ({ data }) => {
       setLanguage(lang);
     }
   }, [data]);
-  return (
-    <div className="px-35 pt-10">
-  <Card className="p-6 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg">
-    
-    <h1 className="text-2xl font-bold mb-4 text-white">
-      {data?.original_title ? data?.original_title : data?.title}
-    </h1>
-
-    <div className="flex text-white">
+ return (
+  <div className="px-4 sm:px-6 md:px-16 lg:px-32 pt-22 sm:pt-20">
+    <Card className="p-4 sm:p-6 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl shadow-lg">
       
-      <div className="w-1/2 pr-4">
-        <p className="mb-2"> Release : {data?.release_date ? data.release_date.slice(0, 4) : "N/A"}</p>
-        <p className="mb-2">Overview: {data?.overview}</p>
+      {/* Title */}
+      <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-white">
+        {data?.original_title ? data?.original_title : data?.title}
+      </h1>
+
+      {/* Content */}
+      <div className="flex flex-col md:flex-row text-white gap-4">
         
+        {/* LEFT */}
+        <div className="md:w-1/2">
+          <p className="mb-2 text-sm sm:text-base">
+            Release: {data?.release_date ? data.release_date.slice(0, 4) : "N/A"}
+          </p>
+
+          <p className="text-sm sm:text-base leading-relaxed">
+            Overview: {data?.overview}
+          </p>
+        </div>
+
+        {/* DIVIDER */}
+        <div className="hidden md:block w-px bg-white/30"></div>
+
+        {/* RIGHT */}
+        <div className="md:w-1/2 space-y-1 text-sm sm:text-base">
+          <p>Lang: {language}</p>
+          <p>Rating: {data?.vote_average}</p>
+          <p>Popularity: {data?.popularity}</p>
+          <p>Votes: {data?.vote_count}</p>
+        </div>
+
       </div>
 
-      <div className="w-px bg-white/30"></div>
-
-      <div className="w-1/2 pl-4">
-        <p>Lang: {language}</p>
-        <p>Rating: {data?.vote_average}</p>
-        <p>Popularity: {data?.popularity}</p>
-        <p>Votes: {data?.vote_count}</p>
-      </div>
-
-    </div>
-
-  </Card>
-</div>
-  );
+    </Card>
+  </div>
+);
 };
 
 export default TitleDetails;

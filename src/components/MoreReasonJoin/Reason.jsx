@@ -641,29 +641,39 @@ const Reason = () => {
     },
   ];
   return (
-    <>
-      <div className="text-2xl font-bold px-35 py-4 pt-10 bg-black text-white">
-        <div>More reasons to join</div>
-      </div>
-      <div className="flex justify-center space-x-5 px-4 py-4 md:px-17 relative bg-black">
-        {reasons.map((item) => {
-          return (
-            <Card className="bg-gradient-to-br from-indigo-950 via-stone-750 to-stone-900 group relative font-bold cursor-pointer  p-0 border-none w-[16rem] h-[19.8rem] overflow-visible isolate">
-              <div className="p-4 h-full relative text-white">
-                <div className="text-2xl py-2">
-                  <h3>{item.title}</h3>
-                </div>
-                <div className="font-semibold">
-                  <p>{item.description}</p>
-                </div>
+   <>
+  {/* Header */}
+  <div className="text-2xl font-bold px-4 sm:px-10 md:px-20 lg:px-30 py-4 pt-10 bg-black text-white">
+    <div>More reasons to join</div>
+  </div>
 
-                <div className="absolute bottom-4 right-4">{item.icon}</div>
-              </div>
-            </Card>
-          );
-        })}
-      </div>
-    </>
+  {/* Cards Container */}
+  <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 px-4 sm:px-10 md:px-20 lg:px-30 py-4 bg-black">
+    {reasons.map((item, index) => (
+      <Card
+        key={index}
+        className="bg-gradient-to-br from-indigo-950 via-stone-750 to-stone-900 group relative font-bold cursor-pointer p-0 border-none w-full h-auto sm:h-[11.8rem] lg:h-[20rem] overflow-visible isolate"
+      >
+        <div className="p-4 h-full relative text-white text-xl sm:text-2xl md:text-1xl lg:text-sm">
+          {/* Title */}
+          <div className="text-xl sm:text-2xl py-2">
+            <h3>{item.title}</h3>
+          </div>
+
+          {/* Description */}
+          <div className="font-semibold text-sm sm:text-base">
+            <p>{item.description}</p>
+          </div>
+
+          {/* Icon */}
+         <div className="absolute bottom-14 right-14 w-4 h-4 sm:w-6 sm:h-6 md:w-6 md:h-6 lg:w-8 lg:h-8">
+  {item.icon}
+</div>
+        </div>
+      </Card>
+    ))}
+  </div>
+</>
   );
 };
 

@@ -26,7 +26,7 @@ const MovieCard = ({ type, movie }) => {
       </div>
 
       {!isHome && !isDetails && (
-        <div className="text-9xl font-bold absolute -left-5 top-30 z-20 select-none text-stroke-white transform transition duration-300 group-hover:scale-none group-hover:-translate-y-2">
+        <div className="text-9xl font-bold absolute -left-6 top-30 z-20 select-none text-stroke-white transform transition duration-300 group-hover:scale-none group-hover:-translate-y-2">
           {movie.num}
         </div>
       )}
