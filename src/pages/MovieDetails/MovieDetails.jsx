@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import LandFooter from "@/components/LandFooter/LandFooter";
 import TitleDetails from "@/components/MovieDetails/TitleDetails";
 import Hero from "@/components/Hero/Hero";
-import TrendingNow from "@/components/MovieCards/MovieCards";
+import MovieCards from "@/components/MovieCards/MovieCards";
 import Trailer from "@/components/Trailer/Trailer";
 
 const MovieDetails = () => {
@@ -15,7 +15,7 @@ const MovieDetails = () => {
         <Hero sendData={setApiData} />
         <TitleDetails data={apiData} />
         <Trailer  /> 
-        <TrendingNow
+        <MovieCards
           type={"movie"}
           category={"upcoming"}
           title={"Popular Tv Series"}

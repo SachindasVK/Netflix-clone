@@ -19,11 +19,9 @@ const MovieCards = ({ type, title, category }) => {
 
   return (
     <>
-      {/* Title */}
       <div className="pt-20 text-2xl sm:text-3xl md:text-4xl font-bold px-4 sm:px-6 md:px-30 lg:px-38 text-white">
         {title}
       </div>
-      {/* Movie list */}
       <MoviesList type={type} movie={apiData.results} />
     </>
   );

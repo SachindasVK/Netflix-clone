@@ -18,7 +18,7 @@ const MoviesList = ({ type, movie }) => {
       <ul
         className={`flex pl-8 overflow-x-auto overflow-y-visible py-6 md:py-7 scrollbar-hide hide-scrollbar ${
           !isHome || !isDetails
-            ? "space-x-4.5 sm:space-x-7 md:space-x-5"
+            ? "space-x-4.5 sm:space-x-7 md:space-x-8"
             : "space-x-6 sm:space-x-7 md:space-x-12"
         }`}
       >
