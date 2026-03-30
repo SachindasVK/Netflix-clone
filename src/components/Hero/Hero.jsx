@@ -113,7 +113,7 @@ useEffect(() => {
           <h1 className="font-semibold">S E R I E S</h1>
         </div>
         {apiData?.original_title && (
-          <div className="text-6xl font-bold pb-4">
+          <div className="text-5xl font-bold pb-4">
             {apiData?.original_title}
           </div>
         )}

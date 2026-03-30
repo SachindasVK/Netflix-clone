@@ -5,6 +5,7 @@ import Reason from '@/components/MoreReasonJoin/Reason'
 import Questions from '@/components/AskedQuestions/Questions'
 import LandFooter from '@/components/LandFooter/LandFooter'
 
+
 const Landing = () => {
   return (
     <div>
