@@ -18,14 +18,7 @@ const LanguageSelect = () => {
           clipRule="evenodd"
         />
       </svg>
-
-      {/* Select */}
-      <select className="lang-dropdown">
-        <option>English</option>
-        <option>हिन्दी</option>
-      </select>
-
-      {/* Arrow */}
+      <h1 className="lang-dropdown">English</h1>
       <svg
         className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white pointer-events-none"
         viewBox="0 0 16 16"

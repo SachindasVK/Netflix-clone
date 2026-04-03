@@ -7,6 +7,9 @@ const MovieCard = ({ type, movie }) => {
   const location = useLocation();
   const isHome = location.pathname === "/in";
   const isDetails = location.pathname.includes('/details')
+  const landing = location.pathname.includes('/')
+  const isTvshows = location.pathname.includes('/tv-shows')
+  const isNewPopular = location.pathname.includes('/new-popular')
   return (
     <Card className={`group relative cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl p-0 border-0 ${isHome ?"w-[11.5rem] h-[16rem]" :"w-[10.5rem] h-[16rem]" } overflow-visible isolate bg-black`}>
       <Link to={`/details/${type}/${movie.id}`}>
@@ -25,7 +28,7 @@ const MovieCard = ({ type, movie }) => {
         <img src={Netflix} alt="Netflix" className="w-8 h-8" />
       </div>
 
-      {!isHome && !isDetails && (
+      {landing&& !isDetails && !isHome && !isTvshows && !isNewPopular && (
         <div className="text-9xl font-bold absolute -left-6 top-30 z-20 select-none text-stroke-white transform transition duration-300 group-hover:scale-none group-hover:-translate-y-2">
           {movie.num}
         </div>

@@ -1,14 +1,14 @@
 import Navbar from "../../components/Navbar/Navbar";
-import MovieCards from "@/components/MovieCards/MovieCards";
 import LandFooter from "@/components/LandFooter/LandFooter";
-import Hero from "@/components/Hero/Hero";
-
+import React from "react";
+import Hero from '../../components/Hero/Hero'
+import MovieCards from "@/components/MovieCards/MovieCards";
 const HomeCompo = () => {
   return (
     <>
       <Navbar />
       <div className="home">
-        <Hero />
+          <Hero />
         <div>
           <MovieCards
             type={"movie"}
@@ -20,22 +20,13 @@ const HomeCompo = () => {
             category={"popular"}
             title={"Popular Movies"}
           />
-          <MovieCards
-            type={"trending"}
-            category={"all"}
-            day={"day"}
-            title={"Trending Now"}
-          />
+
           <MovieCards
             type={"movie"}
             category={"top_rated"}
             title={"Top Rated"}
           />
-          <MovieCards
-            type={"movie"}
-            category={"upcoming"}
-            title={"Upcoming"}
-          />
+          <MovieCards type={"movie"} category={"upcoming"} title={"Upcoming"} />
           <MovieCards
             type={"tv"}
             category={"top_rated"}

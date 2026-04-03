@@ -5,10 +5,9 @@ import bell_icon from '../../assets/bell_icon.svg'
 import profile_img from '../../assets/profile_img.png'
 import caret_icon from '../../assets/caret_icon.svg'
 import { logout } from '../../firebase'
-import { useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
-  const navigate = useNavigate()
   const navRef = useRef()
     useEffect(() => {
         const handleScroll = () => {
@@ -31,7 +30,7 @@ const Navbar = () => {
            <svg onClick={()=>navigate('/in')}
           viewBox="0 0 111 30"
           xmlns="http://www.w3.org/2000/svg"
-          className="h-11 w-auto text-red-900"
+          className="netflix-icon h-11 w-auto text-red-900"
         >
           <g>
             <path
@@ -41,16 +40,30 @@ const Navbar = () => {
           </g>
         </svg>
         <ul>
-            <li onClick={()=>navigate('/in')}>Home</li>
-            <li>Tv shows</li>
-            <li>New & Popular</li>
-            <li>My List</li>
-            <li>Browse by language</li>
-        </ul>
+  <li>
+    <NavLink to="/in" className={({ isActive }) => isActive ? "active-link" : ""}>
+      Home
+    </NavLink>
+  </li>
+
+  <li>
+    <NavLink to="/tv-shows" className={({ isActive }) => isActive ? "active-link" : ""}>
+      Tv Shows
+    </NavLink>
+  </li>
+
+  <li>
+    <NavLink to="/new-popular" className={({ isActive }) => isActive ? "active-link" : ""}>
+      New & Popular
+    </NavLink>
+  </li>
+
+  <li>My List</li>
+</ul>
         </div>
         <div className="navbar-right">
             <img src={search_icon} alt="" className='icons' />
-            <p>children</p>
+            <p className='children'>children</p>
             <img src={bell_icon} alt="" />
             <div className="navbar-profile">
               <img src={profile_img} alt="" className='profile' />

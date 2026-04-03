@@ -11,8 +11,8 @@ const Reason = () => {
           <g id="television-core-small">
             <path
               id="Vector"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M37.2 53.3992C37.2 52.7365 36.6628 52.1992 36 52.1992H34.8C34.1373 52.1992 33.6 52.7365 33.6 53.3992V56.2636C33.6 56.9129 33.0834 57.4433 32.4347 57.4739C30.3013 57.5744 28.1719 57.7834 26.0546 58.1011L19.444 59.0926C18.2692 59.2688 17.4 60.2782 17.4 61.4662V62.0992C17.4 62.4304 17.6686 62.6992 18 62.6992H52.8C53.1314 62.6992 53.4 62.4304 53.4 62.0992V61.4662C53.4 60.2782 52.5309 59.2688 51.3561 59.0926L44.7454 58.1011C42.6282 57.7834 40.4987 57.5744 38.3653 57.4739C37.7167 57.4433 37.2 56.9129 37.2 56.2636V53.3992Z"
               fill="url(#paint0_radial_5179_1308)"
             ></path>
@@ -33,8 +33,8 @@ const Reason = () => {
             ></path>
             <path
               id="Vector_5"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M8.99995 12.6H63C63.663 12.6 64.2 13.1372 64.2 13.8V50.4H7.79995V13.8C7.79995 13.1372 8.33719 12.6 8.99995 12.6ZM7.19995 50.4V13.8C7.19995 12.8059 8.00581 12 8.99995 12H63C63.9942 12 64.8 12.8059 64.8 13.8V50.4V51.6C64.8 52.5941 63.9942 53.4 63 53.4H8.99995C8.00581 53.4 7.19995 52.5941 7.19995 51.6V50.4Z"
               fill="url(#paint4_radial_5179_1308)"
             ></path>
@@ -53,10 +53,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(50.3269 49.3723) rotate(118.526) scale(55.1579 46.2871)"
             >
-              <stop stop-color="#802600"></stop>
-              <stop offset="0.333333" stop-color="#6F181D"></stop>
-              <stop offset="0.666667" stop-color="#5B1333"></stop>
-              <stop offset="1" stop-color="#391945"></stop>
+              <stop stopColor="#802600"></stop>
+              <stop offset="0.333333" stopColor="#6F181D"></stop>
+              <stop offset="0.666667" stopColor="#5B1333"></stop>
+              <stop offset="1" stopColor="#391945"></stop>
             </radialGradient>
             <radialGradient
               id="paint1_radial_5179_1308"
@@ -66,10 +66,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(48.1077 53.6128) rotate(158.116) scale(32.7275 42.219)"
             >
-              <stop stop-color="#99421D"></stop>
-              <stop offset="0.333333" stop-color="#99161D"></stop>
-              <stop offset="0.666667" stop-color="#7D1845"></stop>
-              <stop offset="1" stop-color="#59216E"></stop>
+              <stop stopColor="#99421D"></stop>
+              <stop offset="0.333333" stopColor="#99161D"></stop>
+              <stop offset="0.666667" stopColor="#7D1845"></stop>
+              <stop offset="1" stopColor="#59216E"></stop>
             </radialGradient>
             <linearGradient
               id="paint2_linear_5179_1308"
@@ -79,12 +79,12 @@ const Reason = () => {
               y2="51.4814"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#99161D"></stop>
-              <stop offset="0.245283" stop-color="#CA005B"></stop>
-              <stop offset="0.346698" stop-color="#FF479A"></stop>
-              <stop offset="0.46934" stop-color="#CC3CFF"></stop>
-              <stop offset="0.735849" stop-color="#BC1A22"></stop>
-              <stop offset="1" stop-color="#C94FF5"></stop>
+              <stop stopColor="#99161D"></stop>
+              <stop offset="0.245283" stopColor="#CA005B"></stop>
+              <stop offset="0.346698" stopColor="#FF479A"></stop>
+              <stop offset="0.46934" stopColor="#CC3CFF"></stop>
+              <stop offset="0.735849" stopColor="#BC1A22"></stop>
+              <stop offset="1" stopColor="#C94FF5"></stop>
             </linearGradient>
             <radialGradient
               id="paint3_radial_5179_1308"
@@ -94,8 +94,8 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(38.6181 23.8286) rotate(90) scale(25.9571 25.8545)"
             >
-              <stop stop-color="#1C0E20" stop-opacity="0"></stop>
-              <stop offset="1" stop-color="#1C0E20"></stop>
+              <stop stopColor="#1C0E20" stopOpacity="0"></stop>
+              <stop offset="1" stopColor="#1C0E20"></stop>
             </radialGradient>
             <radialGradient
               id="paint4_radial_5179_1308"
@@ -105,10 +105,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(54 20.1938) rotate(144.293) scale(47.2897 44.8232)"
             >
-              <stop stop-color="#EF7744"></stop>
-              <stop offset="0.333333" stop-color="#E50914"></stop>
-              <stop offset="0.666667" stop-color="#A70D53"></stop>
-              <stop offset="1" stop-color="#792A95"></stop>
+              <stop stopColor="#EF7744"></stop>
+              <stop offset="0.333333" stopColor="#E50914"></stop>
+              <stop offset="0.666667" stopColor="#A70D53"></stop>
+              <stop offset="1" stopColor="#792A95"></stop>
             </radialGradient>
             <radialGradient
               id="paint5_radial_5179_1308"
@@ -118,10 +118,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(36.525 51.3562) rotate(135) scale(4.58735)"
             >
-              <stop stop-color="#FFDCCC"></stop>
-              <stop offset="0.333333" stop-color="#FFBDC0"></stop>
-              <stop offset="0.666667" stop-color="#F89DC6"></stop>
-              <stop offset="1" stop-color="#E4A1FA"></stop>
+              <stop stopColor="#FFDCCC"></stop>
+              <stop offset="0.333333" stopColor="#FFBDC0"></stop>
+              <stop offset="0.666667" stopColor="#F89DC6"></stop>
+              <stop offset="1" stopColor="#E4A1FA"></stop>
             </radialGradient>
           </defs>
         </svg>
@@ -164,16 +164,16 @@ const Reason = () => {
             ></path>
             <path
               id="Vector_6"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M39.0849 42.2727L46.3387 35.76L48.8945 38.5142L38.9118 47.477L37.8466 48.4333L36.6071 47.477L24.9899 38.5142L27.0434 35.76L35.4849 42.2727L33.6 21.6016H37.2L39.0849 42.2727Z"
               fill="url(#paint5_radial_5179_7940)"
             ></path>
             <path
               id="Vector_7"
               opacity="0.4"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M61.6566 34.9618C61.7832 35.3893 62.391 35.3233 62.3694 34.878C61.6962 21.1369 50.1509 9.55975 36.5817 9.01957C34.4606 8.93515 32.4155 9.12541 30.4772 9.55909C30.0745 9.64915 30.1575 10.2082 30.5697 10.2246C45.0094 10.7979 57.6246 21.2971 61.6566 34.9618Z"
               fill="url(#paint6_radial_5179_7940)"
             ></path>
@@ -187,13 +187,13 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(36.0001 36.1837) rotate(-90) scale(34.3829)"
             >
-              <stop offset="0.782019" stop-color="#982DBE"></stop>
+              <stop offset="0.782019" stopColor="#982DBE"></stop>
               <stop
                 offset="0.906819"
-                stop-color="#B038DC"
-                stop-opacity="0.2"
+                stopColor="#B038DC"
+                stopOpacity="0.2"
               ></stop>
-              <stop offset="1" stop-color="#E4A1FA" stop-opacity="0"></stop>
+              <stop offset="1" stopColor="#E4A1FA" stopOpacity="0"></stop>
             </radialGradient>
             <radialGradient
               id="paint1_radial_5179_7940"
@@ -203,10 +203,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(52.9937 20.0992) rotate(135) scale(49.9836)"
             >
-              <stop stop-color="#FFDCCC"></stop>
-              <stop offset="0.333333" stop-color="#FFBDC0"></stop>
-              <stop offset="0.666667" stop-color="#F89DC6"></stop>
-              <stop offset="1" stop-color="#E4A1FA"></stop>
+              <stop stopColor="#FFDCCC"></stop>
+              <stop offset="0.333333" stopColor="#FFBDC0"></stop>
+              <stop offset="0.666667" stopColor="#F89DC6"></stop>
+              <stop offset="1" stopColor="#E4A1FA"></stop>
             </radialGradient>
             <radialGradient
               id="paint2_radial_5179_7940"
@@ -216,10 +216,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(52.7999 19.6937) rotate(135) scale(53.1037)"
             >
-              <stop stop-color="#FFA984"></stop>
-              <stop offset="0.333333" stop-color="#FF787F"></stop>
-              <stop offset="0.666667" stop-color="#F45FA2"></stop>
-              <stop offset="1" stop-color="#C44AF1"></stop>
+              <stop stopColor="#FFA984"></stop>
+              <stop offset="0.333333" stopColor="#FF787F"></stop>
+              <stop offset="0.666667" stopColor="#F45FA2"></stop>
+              <stop offset="1" stopColor="#C44AF1"></stop>
             </radialGradient>
             <radialGradient
               id="paint3_radial_5179_7940"
@@ -229,10 +229,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(52.9937 20.0992) rotate(135) scale(49.9836)"
             >
-              <stop stop-color="#FFDCCC"></stop>
-              <stop offset="0.333333" stop-color="#FFBDC0"></stop>
-              <stop offset="0.666667" stop-color="#F89DC6"></stop>
-              <stop offset="1" stop-color="#E4A1FA"></stop>
+              <stop stopColor="#FFDCCC"></stop>
+              <stop offset="0.333333" stopColor="#FFBDC0"></stop>
+              <stop offset="0.666667" stopColor="#F89DC6"></stop>
+              <stop offset="1" stopColor="#E4A1FA"></stop>
             </radialGradient>
             <radialGradient
               id="paint4_radial_5179_7940"
@@ -242,8 +242,8 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(36.9 39.3) scale(21.3)"
             >
-              <stop stop-color="white"></stop>
-              <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+              <stop stopColor="white"></stop>
+              <stop offset="1" stopColor="white" stopOpacity="0"></stop>
             </radialGradient>
             <radialGradient
               id="paint5_radial_5179_7940"
@@ -253,9 +253,9 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(31.2 32.1016) rotate(39.5226) scale(15.5567)"
             >
-              <stop stop-color="#EF7744"></stop>
-              <stop offset="0.2406" stop-color="#E50914"></stop>
-              <stop offset="1" stop-color="#792A95"></stop>
+              <stop stopColor="#EF7744"></stop>
+              <stop offset="0.2406" stopColor="#E50914"></stop>
+              <stop offset="1" stopColor="#792A95"></stop>
             </radialGradient>
             <radialGradient
               id="paint6_radial_5179_7940"
@@ -265,8 +265,8 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(50.7 21.3) rotate(-180) scale(30)"
             >
-              <stop stop-color="white"></stop>
-              <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+              <stop stopColor="white"></stop>
+              <stop offset="1" stopColor="white" stopOpacity="0"></stop>
             </radialGradient>
           </defs>
         </svg>
@@ -324,8 +324,8 @@ const Reason = () => {
             ></path>
             <path
               id="Vector_9"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M20.0576 9.60156L21.479 11.7187L24 11.0654L22.3575 13.0272L23.7789 15.1444L21.3424 14.2397L19.7 16.2016L19.8365 13.6806L17.4 12.7759L19.9209 12.1225L20.0576 9.60156ZM58.776 52.8016L58.9623 56.4685L62.4 57.4188L59.0774 58.7347L59.2637 62.4016L57.0239 59.548L53.7014 60.8638L55.6397 57.7843L53.4 54.9307L56.8377 55.8811L58.776 52.8016ZM15.206 24.2101L15.8768 21.0016L13.4793 23.1964L10.6853 21.5563L11.9975 24.553L9.59998 26.7478L12.8085 26.405L14.1207 29.4016L14.7915 26.1931L18 25.8502L15.206 24.2101Z"
               fill="url(#paint8_linear_5179_1664)"
             ></path>
@@ -339,10 +339,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(36.6875 32.7016) rotate(135) scale(34.9134)"
             >
-              <stop stop-color="#99421D"></stop>
-              <stop offset="0.333333" stop-color="#99161D"></stop>
-              <stop offset="0.666667" stop-color="#7D1845"></stop>
-              <stop offset="1" stop-color="#59216E"></stop>
+              <stop stopColor="#99421D"></stop>
+              <stop offset="0.333333" stopColor="#99161D"></stop>
+              <stop offset="0.666667" stopColor="#7D1845"></stop>
+              <stop offset="1" stopColor="#59216E"></stop>
             </radialGradient>
             <radialGradient
               id="paint1_radial_5179_1664"
@@ -352,10 +352,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(42.5937 27.2992) rotate(135) scale(44.5477 44.5279)"
             >
-              <stop stop-color="#EF7744"></stop>
-              <stop offset="0.333333" stop-color="#E50914"></stop>
-              <stop offset="0.666667" stop-color="#A70D53"></stop>
-              <stop offset="1" stop-color="#792A95"></stop>
+              <stop stopColor="#EF7744"></stop>
+              <stop offset="0.333333" stopColor="#E50914"></stop>
+              <stop offset="0.666667" stopColor="#A70D53"></stop>
+              <stop offset="1" stopColor="#792A95"></stop>
             </radialGradient>
             <radialGradient
               id="paint2_radial_5179_1664"
@@ -365,10 +365,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(42.3 29.106) rotate(135) scale(31.8127)"
             >
-              <stop stop-color="#FB540D"></stop>
-              <stop offset="0.333333" stop-color="#E50914"></stop>
-              <stop offset="0.666667" stop-color="#A70D53"></stop>
-              <stop offset="1" stop-color="#792A95"></stop>
+              <stop stopColor="#FB540D"></stop>
+              <stop offset="0.333333" stopColor="#E50914"></stop>
+              <stop offset="0.666667" stopColor="#A70D53"></stop>
+              <stop offset="1" stopColor="#792A95"></stop>
             </radialGradient>
             <radialGradient
               id="paint3_radial_5179_1664"
@@ -378,10 +378,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(57.675 14.7078) rotate(134.326) scale(24.0433 24.0367)"
             >
-              <stop stop-color="#FFDCCC"></stop>
-              <stop offset="0.333333" stop-color="#FFBDC0"></stop>
-              <stop offset="0.666667" stop-color="#F89DC6"></stop>
-              <stop offset="1" stop-color="#E4A1FA"></stop>
+              <stop stopColor="#FFDCCC"></stop>
+              <stop offset="0.333333" stopColor="#FFBDC0"></stop>
+              <stop offset="0.666667" stopColor="#F89DC6"></stop>
+              <stop offset="1" stopColor="#E4A1FA"></stop>
             </radialGradient>
             <radialGradient
               id="paint4_radial_5179_1664"
@@ -391,9 +391,9 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(52.1305 21.273) rotate(141.875) scale(9.87138 12.8159)"
             >
-              <stop offset="0.307292" stop-color="#F89DC6"></stop>
-              <stop offset="0.645392" stop-color="#E75094"></stop>
-              <stop offset="1" stop-color="#59216E"></stop>
+              <stop offset="0.307292" stopColor="#F89DC6"></stop>
+              <stop offset="0.645392" stopColor="#E75094"></stop>
+              <stop offset="1" stopColor="#59216E"></stop>
             </radialGradient>
             <radialGradient
               id="paint5_radial_5179_1664"
@@ -403,8 +403,8 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(55.8 15.6) rotate(135) scale(13.1522)"
             >
-              <stop stop-color="white"></stop>
-              <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+              <stop stopColor="white"></stop>
+              <stop offset="1" stopColor="white" stopOpacity="0"></stop>
             </radialGradient>
             <radialGradient
               id="paint6_radial_5179_1664"
@@ -414,8 +414,8 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(49.2362 22.9648) rotate(131.079) scale(5.08644 6.006)"
             >
-              <stop stop-color="white"></stop>
-              <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+              <stop stopColor="white"></stop>
+              <stop offset="1" stopColor="white" stopOpacity="0"></stop>
             </radialGradient>
             <radialGradient
               id="paint7_radial_5179_1664"
@@ -425,8 +425,8 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(36.8758 29.1353) rotate(137.622) scale(13.5764)"
             >
-              <stop stop-color="#FFA984"></stop>
-              <stop offset="1" stop-color="#F7636B" stop-opacity="0"></stop>
+              <stop stopColor="#FFA984"></stop>
+              <stop offset="1" stopColor="#F7636B" stopOpacity="0"></stop>
             </radialGradient>
             <linearGradient
               id="paint8_linear_5179_1664"
@@ -436,10 +436,10 @@ const Reason = () => {
               y2="48.3016"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#EF7744"></stop>
-              <stop offset="0.333333" stop-color="#E50914"></stop>
-              <stop offset="0.666667" stop-color="#A70D53"></stop>
-              <stop offset="1" stop-color="#792A95"></stop>
+              <stop stopColor="#EF7744"></stop>
+              <stop offset="0.333333" stopColor="#E50914"></stop>
+              <stop offset="0.666667" stopColor="#A70D53"></stop>
+              <stop offset="1" stopColor="#792A95"></stop>
             </linearGradient>
           </defs>
         </svg>
@@ -513,10 +513,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(39.075 17.6882) rotate(135) scale(32.8097)"
             >
-              <stop stop-color="#99421D"></stop>
-              <stop offset="0.333333" stop-color="#99161D"></stop>
-              <stop offset="0.666667" stop-color="#7D1845"></stop>
-              <stop offset="1" stop-color="#59216E"></stop>
+              <stop stopColor="#99421D"></stop>
+              <stop offset="0.333333" stopColor="#99161D"></stop>
+              <stop offset="0.666667" stopColor="#7D1845"></stop>
+              <stop offset="1" stopColor="#59216E"></stop>
             </radialGradient>
             <radialGradient
               id="paint1_radial_5179_7919"
@@ -526,10 +526,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(62.4 8.70157) rotate(133.87) scale(75.3216)"
             >
-              <stop stop-color="#FFDCCC"></stop>
-              <stop offset="0.333333" stop-color="#FFBDC0"></stop>
-              <stop offset="0.666667" stop-color="#F89DC6"></stop>
-              <stop offset="1" stop-color="#E4A1FA"></stop>
+              <stop stopColor="#FFDCCC"></stop>
+              <stop offset="0.333333" stopColor="#FFBDC0"></stop>
+              <stop offset="0.666667" stopColor="#F89DC6"></stop>
+              <stop offset="1" stopColor="#E4A1FA"></stop>
             </radialGradient>
             <radialGradient
               id="paint2_radial_5179_7919"
@@ -539,10 +539,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(60.3 11.1008) rotate(133.939) scale(68.7426 55.9547)"
             >
-              <stop stop-color="#99421D"></stop>
-              <stop offset="0.333333" stop-color="#99161D"></stop>
-              <stop offset="0.666667" stop-color="#7D1845"></stop>
-              <stop offset="1" stop-color="#59216E"></stop>
+              <stop stopColor="#99421D"></stop>
+              <stop offset="0.333333" stopColor="#99161D"></stop>
+              <stop offset="0.666667" stopColor="#7D1845"></stop>
+              <stop offset="1" stopColor="#59216E"></stop>
             </radialGradient>
             <radialGradient
               id="paint3_radial_5179_7919"
@@ -552,10 +552,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(60.3 11.1008) rotate(133.939) scale(68.7426 55.9547)"
             >
-              <stop stop-color="#99421D"></stop>
-              <stop offset="0.333333" stop-color="#99161D"></stop>
-              <stop offset="0.666667" stop-color="#7D1845"></stop>
-              <stop offset="1" stop-color="#59216E"></stop>
+              <stop stopColor="#99421D"></stop>
+              <stop offset="0.333333" stopColor="#99161D"></stop>
+              <stop offset="0.666667" stopColor="#7D1845"></stop>
+              <stop offset="1" stopColor="#59216E"></stop>
             </radialGradient>
             <radialGradient
               id="paint4_radial_5179_7919"
@@ -565,10 +565,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(60.3 11.0994) rotate(133.939) scale(68.7426 55.9548)"
             >
-              <stop stop-color="#99421D"></stop>
-              <stop offset="0.333333" stop-color="#99161D"></stop>
-              <stop offset="0.666667" stop-color="#7D1845"></stop>
-              <stop offset="1" stop-color="#59216E"></stop>
+              <stop stopColor="#99421D"></stop>
+              <stop offset="0.333333" stopColor="#99161D"></stop>
+              <stop offset="0.666667" stopColor="#7D1845"></stop>
+              <stop offset="1" stopColor="#59216E"></stop>
             </radialGradient>
             <radialGradient
               id="paint5_radial_5179_7919"
@@ -578,10 +578,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(39.6 27.9016) rotate(135) scale(23.3345)"
             >
-              <stop stop-color="#FFA984"></stop>
-              <stop offset="0.333333" stop-color="#FF787F"></stop>
-              <stop offset="0.666667" stop-color="#F45FA2"></stop>
-              <stop offset="1" stop-color="#C44AF1"></stop>
+              <stop stopColor="#FFA984"></stop>
+              <stop offset="0.333333" stopColor="#FF787F"></stop>
+              <stop offset="0.666667" stopColor="#F45FA2"></stop>
+              <stop offset="1" stopColor="#C44AF1"></stop>
             </radialGradient>
             <radialGradient
               id="paint6_radial_5179_7919"
@@ -591,10 +591,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(61.8 29.7016) rotate(135) scale(43.2749)"
             >
-              <stop stop-color="#EF7744"></stop>
-              <stop offset="0.333333" stop-color="#E50914"></stop>
-              <stop offset="0.666667" stop-color="#A70D53"></stop>
-              <stop offset="1" stop-color="#792A95"></stop>
+              <stop stopColor="#EF7744"></stop>
+              <stop offset="0.333333" stopColor="#E50914"></stop>
+              <stop offset="0.666667" stopColor="#A70D53"></stop>
+              <stop offset="1" stopColor="#792A95"></stop>
             </radialGradient>
             <radialGradient
               id="paint7_radial_5179_7919"
@@ -604,10 +604,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(62.1 11.1008) rotate(137.146) scale(73.6614 60.3576)"
             >
-              <stop stop-color="#FFDCCC"></stop>
-              <stop offset="0.333333" stop-color="#FDF6F6"></stop>
-              <stop offset="0.666667" stop-color="#FADCE9"></stop>
-              <stop offset="1" stop-color="#E4A1FA"></stop>
+              <stop stopColor="#FFDCCC"></stop>
+              <stop offset="0.333333" stopColor="#FDF6F6"></stop>
+              <stop offset="0.666667" stopColor="#FADCE9"></stop>
+              <stop offset="1" stopColor="#E4A1FA"></stop>
             </radialGradient>
             <radialGradient
               id="paint8_radial_5179_7919"
@@ -617,10 +617,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(62.1 11.1008) rotate(137.146) scale(73.6614 60.3576)"
             >
-              <stop stop-color="#FFDCCC"></stop>
-              <stop offset="0.333333" stop-color="#FDF6F6"></stop>
-              <stop offset="0.666667" stop-color="#FADCE9"></stop>
-              <stop offset="1" stop-color="#E4A1FA"></stop>
+              <stop stopColor="#FFDCCC"></stop>
+              <stop offset="0.333333" stopColor="#FDF6F6"></stop>
+              <stop offset="0.666667" stopColor="#FADCE9"></stop>
+              <stop offset="1" stopColor="#E4A1FA"></stop>
             </radialGradient>
             <radialGradient
               id="paint9_radial_5179_7919"
@@ -630,10 +630,10 @@ const Reason = () => {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(62.1 11.1017) rotate(137.146) scale(73.6614 60.3576)"
             >
-              <stop stop-color="#FFDCCC"></stop>
-              <stop offset="0.333333" stop-color="#FDF6F6"></stop>
-              <stop offset="0.666667" stop-color="#FADCE9"></stop>
-              <stop offset="1" stop-color="#E4A1FA"></stop>
+              <stop stopColor="#FFDCCC"></stop>
+              <stop offset="0.333333" stopColor="#FDF6F6"></stop>
+              <stop offset="0.666667" stopColor="#FADCE9"></stop>
+              <stop offset="1" stopColor="#E4A1FA"></stop>
             </radialGradient>
           </defs>
         </svg>

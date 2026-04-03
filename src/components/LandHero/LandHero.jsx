@@ -21,7 +21,6 @@ const LandHero = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/90 pointer-events-none" />
 
-      {/* Hero Content */}
       <div className="relative text-white text-center px-4 sm:px-6 md:px-10 lg:px-20 w-full max-w-4xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 drop-shadow-2xl">
           Unlimited movies, shows, and more

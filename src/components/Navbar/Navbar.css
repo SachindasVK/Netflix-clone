@@ -1,11 +1,12 @@
 .navbar {
   width: 100%;
-  padding: 15px 6%;
+  padding: 15px 4%;
   display: flex;
   justify-content: space-between;
   position: fixed;
   font-size: 14px;
   color: #e5e5e5;
+  
 
   /* gradient */
   background-image: linear-gradient(
@@ -14,10 +15,10 @@
     transparent
   );
 
-  z-index: 999; 
+  z-index: 999;
   transition-duration: 1000ms;
 
-  overflow: visible;  
+  overflow: visible;
 }
 
 /* LEFT */
@@ -41,7 +42,6 @@
   cursor: pointer;
 }
 
-/* RIGHT */
 .navbar-right {
   display: flex;
   gap: 20px;
@@ -98,18 +98,18 @@
   transform: translateY(0);
 }
 
-/* DARK NAV */
 .nav-dark {
   background: #141414;
   transition-duration: 1400ms;
 }
 
-/* RESPONSIVE */
 @media (max-width: 800px) {
   .navbar {
     padding: 20px 4%;
   }
-
+  .netflix-icon {
+    height: 35px;
+  }
   .navbar-left ul {
     display: none;
   }
@@ -127,8 +127,148 @@
   .navbar-right img {
     height: 20px;
   }
+  .netflix-icon {
+    height: 25px;
+  }
 
   .navbar-right {
     gap: 10px;
   }
+}
+
+@media (max-width: 375px) {
+  .navbar img {
+    height: 12px;
+  }
+  .children {
+    display: none;
+  }
+
+  .netflix-icon {
+    height: 20px;
+  }
+  .dropdown {
+  top: 150%;
+  right: 0;
+  width: max-content;
+  background: #191919;
+  padding: 10px 15px;
+  border-radius: 5px;
+  }
+  .navbar-profile img{
+    height: 15px;
+    width: 8px;
+  }
+
+  div.navbar-profile img.profile {
+    height: 15px;
+    width: 20px;
+  }
+ 
+  .dropdown p{
+    font-size: 8px;
+  }
+
+  .navbar-right {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 425px) {
+  .navbar img {
+    height: 18px;
+  }
+
+  .navbar {
+    padding: 15px;
+  }
+  .children {
+    display: none;
+  }
+
+  .netflix-icon {
+    height: 24px;
+  }
+  .dropdown {
+  top: 150%;
+  right: 0;
+  width: max-content;
+  background: #191919;
+  padding: 12px 18px;
+  border-radius: 5px;
+  }
+  .navbar-profile img{
+    height: 18px;
+    width: 10px;
+  }
+
+  div.navbar-profile img.profile {
+    height: 20px;
+    width: 20px;
+  }
+ 
+  .dropdown p{
+    font-size: 10px;
+  }
+
+  .navbar-right {
+    gap: 15px;
+  }
+}
+@media (max-width: 320px) {
+  .navbar img {
+    height: 10px;
+  }
+  .children {
+    display: none;
+  }
+
+  .netflix-icon {
+    height: 20px;
+  }
+  .dropdown {
+  top: 150%;
+  right: 0;
+  width: max-content;
+  background: #191919;
+  padding: 8px 15px;
+  border-radius: 5px;
+  }
+  .navbar{
+    padding: 10px;
+  }
+  .navbar-profile img{
+    height: 14px;
+    width: 8px;
+  }
+
+  div.navbar-profile img.profile {
+    height: 15px;
+    width: 15px;
+  }
+ 
+  .dropdown p{
+    font-size: 8px;
+  }
+
+  .navbar-right {
+    gap: 10px;
+  }
+}
+
+
+ul li a {
+  text-decoration: none;
+  color: #e5e5e5;
+  padding-bottom: 4px;
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  color: white;
+}
+
+.active-link {
+  border-bottom: 2px solid #e50914; 
+  color: white;
 }

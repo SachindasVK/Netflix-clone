@@ -1,20 +1,17 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import LanguageSelect from '../Language/LanguageSelect';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import LanguageSelect from "../Language/LanguageSelect";
 
 const LandHeader = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="px-4 sm:px-6 md:px-10 lg:px-20 py-4 flex flex-col sm:flex-row items-center justify-between w-full gap-4 sm:gap-0 absolute top-0 left-0 z-20">
-      {/* Logo */}
-      
-      {/* Logo */}
+    <header className="px-4 sm:px-6 md:px-10 lg:px-20 py-4 flex  sm:flex-row items-center justify-between w-full gap-4 sm:gap-0 absolute top-0 left-0 z-20">
       <div className="flex items-center justify-center sm:justify-start w-full sm:w-auto">
         <svg
           viewBox="0 0 111 30"
           xmlns="http://www.w3.org/2000/svg"
-          className="h-8 sm:h-10 w-auto text-red-600"
+          className="w-[clamp(90px,25vw,160px)] h-auto"
         >
           <g>
             <path
@@ -25,15 +22,16 @@ const LandHeader = () => {
         </svg>
       </div>
 
-      {/* Right Side: Language Select + Button */}
-      <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 w-full sm:w-auto">
+      <div className="flex sm:flex-row items-center gap-2 sm:gap-4 w-full sm:w-auto flex-nowrap">
         {/* Select Language */}
-        <LanguageSelect />
+        <div className="shrink-0">
+          <LanguageSelect />
+        </div>
 
         {/* Sign in button */}
         <button
-          onClick={() => navigate('/login')}
-          className="bg-red-600 text-white px-4 py-2 sm:py-[4px] rounded flex items-center justify-center font-semibold"
+          onClick={() => navigate("/login")}
+          className="bg-red-600 text-white px-3 sm:px-4 py-1 sm:py-[4px] rounded flex items-center justify-center font-semibold whitespace-nowrap text-sm sm:text-base"
         >
           Sign in
         </button>

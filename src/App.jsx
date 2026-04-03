@@ -1,15 +1,16 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useContext } from "react";
 import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
 import "./app.css";
-import { onAuthStateChanged } from "firebase/auth";
 import { useEffect } from "react";
-import { auth } from "./firebase";
+import { AuthContext } from "./components/context/Auth";
 import { ToastContainer } from "react-toastify";
 
 const Landing = React.lazy(() => import("./pages/Landing"));
 const HomeCompo = React.lazy(() => import("./pages/Home/Home"));
 const Login = React.lazy(() => import("./pages/Login/Login"));
 const Player = React.lazy(() => import("./pages/Player/Player"));
+const Tvshows = React.lazy(() => import("./pages/TvShows/Tvshows"));
+const NewPopular = React.lazy(() => import("./pages/NewPopular/NewPopular"));
 const MovieDetails = React.lazy(
   () => import("./pages/MovieDetails/MovieDetails"),
 );
@@ -17,15 +18,8 @@ const MovieDetails = React.lazy(
 const App = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [user, setUser] = React.useState(undefined);
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-    });
-
-    return () => unsubscribe();
-  }, []);
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     if (user === undefined) return;
@@ -52,25 +46,36 @@ const App = () => {
   }
 
   return (
-    <Suspense
-      fallback={
-        <div className="login-spinner">
-          <img
-            src="https://media.wired.com/photos/592744d3f3e2356fd800bf00/3:2/w_2560%2Cc_limit/Netflix_LoadTime.gif"
-            alt=""
-          />
-        </div>
-      }
-    >
-      <ToastContainer theme="dark" />
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/in" element={<HomeCompo />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/player/:type/:id" element={<Player />} />
-        <Route path="/details/:type/:id" element={<MovieDetails />} />
-      </Routes>
-    </Suspense>
+    <>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        theme="dark"
+        style={{ zIndex: 9999 }}
+        toastClassName="custom-toast"
+        bodyClassName="custom-toast-body"
+      />
+      <Suspense
+        fallback={
+          <div className="login-spinner">
+            <img
+              src="https://media.wired.com/photos/592744d3f3e2356fd800bf00/3:2/w_2560%2Cc_limit/Netflix_LoadTime.gif"
+              alt=""
+            />
+          </div>
+        }
+      >
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/in" element={<HomeCompo />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/player/:type/:id" element={<Player />} />
+          <Route path="/details/:type/:id" element={<MovieDetails />} />
+          <Route path="/tv-shows" element={<Tvshows />} />
+          <Route path="/new-popular" element={<NewPopular />} />
+        </Routes>
+      </Suspense>
+    </>
   );
 };
 
