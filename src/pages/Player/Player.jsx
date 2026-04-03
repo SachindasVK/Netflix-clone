@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import TitleDetails from "@/components/MovieDetails/TitleDetails";
 import Navbar from "@/components/Navbar/Navbar";
+import LandFooter from "@/components/LandFooter/LandFooter";
 
 const Player = () => {
   const { id, type } = useParams();
@@ -77,6 +78,7 @@ const Player = () => {
           </div>
           <TitleDetails data={apiData} />
         </div>
+        <LandFooter />
       </div>
     </>
   );

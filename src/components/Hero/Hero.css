@@ -1,13 +1,8 @@
 .hero {
   position: relative;
-  height: 60vh;
+  height: 90vh;
 }
 
-@media (min-width: 640px) {
-  .hero {
-    height: 75vh;
-  }
-}
 
 @media (min-width: 1024px) {
   .hero {
@@ -53,25 +48,6 @@
   height: 100%;
   object-fit: cover;
   position: relative;
-  z-index: 0;
-}
-
-/* IMAGE */
-.banner-img-video {
-  padding: 20px;
-  padding-top: 100px;
-  border-radius: 50px;
-}
-
-.hero-img-wrapper iframe {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  width: 180.77vh;
-  height: 200%;
-
-  transform: translate(-50%, -50%);
-  border: none;
   z-index: 0;
 }
 /* CAPTION */
