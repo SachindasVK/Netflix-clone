@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import play_icon from "../../assets/play_icon.png";
 import info_icon from "../../assets/info_icon.png";
@@ -7,16 +7,19 @@ import { toast } from "react-toastify";
 import "./Hero.css";
 import addWishlist from "../../assets/addWishlist.svg";
 import addedWishlist from "../../assets/addedWishlist.svg";
+import { WishlistContext } from "../context/WishlistContext";
 
 const Hero = ({ sendData }) => {
+  const { wishlist, addToWishlist, removeFromWishlist } =
+    useContext(WishlistContext);
   const navigate = useNavigate();
   const [apiData, setApiData] = useState();
-  const [toggle, setToggle] = useState(false);
   const location = useLocation();
   const isDetails = location.pathname.includes("/details");
   const tvShows = location.pathname.includes("/tv-shows");
   const newPopular = location.pathname.includes("/new-popular");
   const { type, id } = useParams();
+  const isAdded = wishlist.some((item) => item.id === apiData?.id);
 
   useEffect(() => {
     if (apiData && typeof sendData === "function") {
@@ -58,8 +61,16 @@ const Hero = ({ sendData }) => {
     fetchData();
   }, [isDetails, type, id]);
 
-  const handleToggle = () => {
-    setToggle(!toggle);
+  const handleWishlist = () => {
+    if (!apiData) return;
+
+    if (isAdded) {
+      removeFromWishlist(apiData.id);
+      toast.info("Removed from wishlist");
+    } else {
+      addToWishlist(apiData);
+      toast.success("Added to wishlist");
+    }
   };
 
   return (
@@ -77,7 +88,7 @@ const Hero = ({ sendData }) => {
       </div>
 
       <div className="hero-caption">
-        <div className="flex items-center gap-1 sm:gap-1 md:gap-1 lg:gap-2 mb-2 sm:mb-3 md:mb-4 lg:mb-5">
+        <div className="flex items-center gap-1 sm:gap-1 md:gap-1 lg:gap-1 mb-2 sm:mb-3 md:mb-4 lg:mb-5">
           <img src={Netflix} alt="" className="caption-img" />{" "}
           <h1 className="netflix-series font-semibold">S E R I E S</h1>
         </div>
@@ -105,9 +116,9 @@ const Hero = ({ sendData }) => {
               More Info
             </button>
           ) : (
-            <button onClick={handleToggle} className="btn dark-btn">
-              <img src={toggle ? addedWishlist : addWishlist} alt="" />
-              Wishlist
+            <button onClick={handleWishlist} className="btn dark-btn">
+              <img src={isAdded ? addedWishlist : addWishlist} alt="" />
+              {isAdded ? "Remove" : "Wishlist"}
             </button>
           )}
         </div>

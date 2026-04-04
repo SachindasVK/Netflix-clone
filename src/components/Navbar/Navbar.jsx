@@ -1,33 +1,34 @@
-import React, { useEffect, useRef } from 'react'
-import './Navbar.css'
-import search_icon from '../../assets/search_icon.svg'
-import bell_icon from '../../assets/bell_icon.svg'
-import profile_img from '../../assets/profile_img.png'
-import caret_icon from '../../assets/caret_icon.svg'
-import { logout } from '../../firebase'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect, useRef } from "react";
+import "./Navbar.css";
+import search_icon from "../../assets/search_icon.svg";
+import bell_icon from "../../assets/bell_icon.svg";
+import profile_img from "../../assets/profile_img.png";
+import caret_icon from "../../assets/caret_icon.svg";
+import { logout } from "../../firebase";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const navRef = useRef()
-    useEffect(() => {
-        const handleScroll = () => {
-            if (navRef.current) {
-                if (window.scrollY >= 5) {
-                    navRef.current.classList.add("nav-dark");
-                } else {
-                    navRef.current.classList.remove("nav-dark");
-                }
-            }
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+  const navRef = useRef();
+  useEffect(() => {
+    const handleScroll = () => {
+      if (navRef.current) {
+        if (window.scrollY >= 5) {
+          navRef.current.classList.add("nav-dark");
+        } else {
+          navRef.current.classList.remove("nav-dark");
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div ref={navRef} className='navbar'>
-        <div className="navbar-left">
-           <svg onClick={()=>navigate('/in')}
+    <div ref={navRef} className="navbar">
+      <div className="navbar-left">
+        <svg
+          onClick={() => navigate("/in")}
           viewBox="0 0 111 30"
           xmlns="http://www.w3.org/2000/svg"
           className="netflix-icon h-11 w-auto text-red-900"
@@ -40,41 +41,60 @@ const Navbar = () => {
           </g>
         </svg>
         <ul>
-  <li>
-    <NavLink to="/in" className={({ isActive }) => isActive ? "active-link" : ""}>
-      Home
-    </NavLink>
-  </li>
+          <li>
+            <NavLink
+              to="/in"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Home
+            </NavLink>
+          </li>
 
-  <li>
-    <NavLink to="/tv-shows" className={({ isActive }) => isActive ? "active-link" : ""}>
-      Tv Shows
-    </NavLink>
-  </li>
+          <li>
+            <NavLink
+              to="/tv-shows"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Tv Shows
+            </NavLink>
+          </li>
 
-  <li>
-    <NavLink to="/new-popular" className={({ isActive }) => isActive ? "active-link" : ""}>
-      New & Popular
-    </NavLink>
-  </li>
-
-  <li>My List</li>
-</ul>
+          <li>
+            <NavLink
+              to="/new-popular"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              New & Popular
+            </NavLink>
+          </li>
+          <NavLink
+            to="/my-list"
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
+            <li>My List</li>
+          </NavLink>
+        </ul>
+      </div>
+      <div className="navbar-right">
+        <img src={search_icon} alt="" className="icons" />
+        <p className="children">children</p>
+        <img src={bell_icon} alt="" />
+        <div className="navbar-profile">
+          <img src={profile_img} alt="" className="profile" />
+          <img src={caret_icon} alt="" />
+          <div className="dropdown">
+            <p
+              onClick={() => {
+                logout();
+              }}
+            >
+              Sign out of Netflix
+            </p>
+          </div>
         </div>
-        <div className="navbar-right">
-            <img src={search_icon} alt="" className='icons' />
-            <p className='children'>children</p>
-            <img src={bell_icon} alt="" />
-            <div className="navbar-profile">
-              <img src={profile_img} alt="" className='profile' />
-              <img src={caret_icon} alt="" />
-              <div className='dropdown'>
-                <p onClick={()=>{logout()}}>Sign out of Netflix</p>
-              </div>
-            </div>
-        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

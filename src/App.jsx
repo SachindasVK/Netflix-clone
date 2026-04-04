@@ -14,7 +14,7 @@ const NewPopular = React.lazy(() => import("./pages/NewPopular/NewPopular"));
 const MovieDetails = React.lazy(
   () => import("./pages/MovieDetails/MovieDetails"),
 );
-
+const Mylist = React.lazy(()=> import("./pages/Mylist/Mylist"))
 const App = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -73,6 +73,7 @@ const App = () => {
           <Route path="/details/:type/:id" element={<MovieDetails />} />
           <Route path="/tv-shows" element={<Tvshows />} />
           <Route path="/new-popular" element={<NewPopular />} />
+          <Route path="/my-list" element={<Mylist />} />
         </Routes>
       </Suspense>
     </>

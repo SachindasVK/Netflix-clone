@@ -33,7 +33,7 @@ const TitleDetails = ({ data }) => {
       
       {/* Title */}
       <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-white">
-        {data?.original_title ? data?.original_title : data?.title}
+        {data?.title ? data?.title : data?.original_title}
       </h1>
 
       {/* Content */}

@@ -285,6 +285,9 @@
     padding: 50px;
     padding-top: 100px;
   }
+  .Title {
+    margin-right: 160px;
+  }
   p.overview {
     font-size: medium;
     margin-right: 300px;

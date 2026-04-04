@@ -22,8 +22,8 @@ const MovieDetails = () => {
         <Trailer />
         <MovieCards
           type={"movie"}
-          category={"upcoming"}
-          title={"Popular Tv Series"}
+          category={"popular"}
+          title={"You Might Also Like"}
         />
         <LandFooter />
       </div>
