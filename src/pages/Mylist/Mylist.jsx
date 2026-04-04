@@ -46,9 +46,9 @@ const Mylist = () => {
                       onClick={() =>{removeFromWishlist(movie.id)
                         toast.info("Removed from Watchlist")
                       }}
-                      className="remove-btn text-xs flex items-center gap-1 rounded-xs cursor-pointer"
+                      className="remove-btn text-sm flex items-center gap-1 rounded-xs cursor-pointer"
                     >
-                      <img src={remove} alt="" className="w-4 h-4" />
+                      <img src={remove} alt="" className="w-5 h-5" />
                       Remove
                     </button>
                   </div>
