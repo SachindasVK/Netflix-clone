@@ -36,7 +36,7 @@ const Hero = ({ sendData }) => {
           // DETAILS PAGE
           url = `https://api.themoviedb.org/3/${type}/${id}?api_key=${import.meta.env.VITE_TMDB_KEY}`;
         } else if (tvShows) {
-          url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${import.meta.env.VITE_TMDB_KEY}`;
+          url = `https://api.themoviedb.org/3/tv/top_rated?api_key=${import.meta.env.VITE_TMDB_KEY}`;
         } else if (newPopular) {
           url = `https://api.themoviedb.org/3/movie/upcoming?api_key=${import.meta.env.VITE_TMDB_KEY}`;
         } else {
