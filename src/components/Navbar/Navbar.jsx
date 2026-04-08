@@ -1,14 +1,17 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
 import search_icon from "../../assets/search_icon.svg";
 import bell_icon from "../../assets/bell_icon.svg";
 import profile_img from "../../assets/profile_img.png";
 import caret_icon from "../../assets/caret_icon.svg";
 import { logout } from "../../firebase";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navRef = useRef();
+  const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (navRef.current) {
@@ -27,6 +30,9 @@ const Navbar = () => {
   return (
     <div ref={navRef} className="navbar">
       <div className="navbar-left">
+        <div className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
+          ☰
+        </div>
         <svg
           onClick={() => navigate("/in")}
           viewBox="0 0 111 30"
@@ -40,7 +46,7 @@ const Navbar = () => {
             />
           </g>
         </svg>
-        <ul>
+        <ul className={isOpen ? "nav-menu active" : "nav-menu"}>
           <li>
             <NavLink
               to="/in"
@@ -67,12 +73,9 @@ const Navbar = () => {
               New & Popular
             </NavLink>
           </li>
-          <NavLink
-            to="/my-list"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            <li>My List</li>
-          </NavLink>
+          <li>
+            <NavLink to="/my-list">My List</NavLink>
+          </li>
         </ul>
       </div>
       <div className="navbar-right">
