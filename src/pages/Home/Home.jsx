@@ -15,11 +15,6 @@ const HomeCompo = () => {
             category={"now_playing"}
             title={"Your Next Watch"}
           />
-          <MovieCards
-            type={"movie"}
-            category={"popular"}
-            title={"Popular Movies"}
-          />
 
           <MovieCards
             type={"movie"}
