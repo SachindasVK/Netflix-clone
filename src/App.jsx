@@ -3,7 +3,7 @@ import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
 import "./app.css";
 import { useEffect } from "react";
 import { AuthContext } from "./components/context/Auth";
-import { Toaster } from "react-hot-toast";
+import { ToastContainer } from "react-toastify";
 
 const Landing = React.lazy(() => import("./pages/Landing"));
 const HomeCompo = React.lazy(() => import("./pages/Home/Home"));
@@ -47,7 +47,7 @@ const App = () => {
 
   return (
     <>
-      <Toaster
+      <ToastContainer
         position="top-right"
         autoClose={2000}
         theme="dark"

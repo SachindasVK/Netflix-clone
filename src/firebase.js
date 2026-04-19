@@ -7,7 +7,7 @@ import {
 } from "firebase/auth";
 
 import { addDoc, collection, getFirestore } from "firebase/firestore";
-import { toast } from "react-hot-toast";
+import { toast } from "react-toastify";
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
